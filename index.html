@@ -3,85 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxury Property</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
+  <title>Coastal Oasis | Naples, FL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <div class="nav">
-    <strong>Listing</strong>
-    <span>Contact Agent</span>
-  </div>
+  <header class="site-top">
+    <div class="site-top__inner">
+      <a href="#documents" class="site-top__link">Documents</a>
+      <button type="button" class="site-top__cta" data-scroll="contact">Schedule a tour</button>
+    </div>
+  </header>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-content">
-      <div class="price">$825,000</div>
-      <h1>123 Coastal Drive</h1>
-      <p>Naples, Florida</p>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav__inner">
+      <span class="nav__brand">Coastal Oasis</span>
+      <div class="nav__actions">
+        <a href="#brochures" class="nav__text">Brochures</a>
+        <a href="#contact" class="nav__pill">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" aria-label="Listing hero">
+    <div class="hero__media" role="img" aria-label="Property photography placeholder"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Private listing</p>
+      <h1 class="hero__title">Coastal Oasis</h1>
+      <p class="hero__address">Naples, Florida</p>
+      <button type="button" class="hero__price-btn" aria-expanded="false" data-price-toggle>
+        <span class="hero__price-label">Click for price</span>
+        <span class="hero__price-value" hidden>Contact for pricing</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="stat-bar" role="group" aria-label="Property facts">
+    <div class="stat-bar__inner">
+      <div class="stat"><span class="stat__num">—</span><span class="stat__label">Beds</span></div>
+      <div class="stat"><span class="stat__num">—</span><span class="stat__label">Baths</span></div>
+      <div class="stat"><span class="stat__num">—</span><span class="stat__label">Interior sqft</span></div>
+      <div class="stat"><span class="stat__num">—</span><span class="stat__label">Lot size</span></div>
     </div>
   </div>
 
-  <!-- DETAILS -->
-  <div class="section">
-    <div class="details">
-      <div>3 Beds</div>
-      <div>2 Baths</div>
-      <div>2,100 sqft</div>
-    </div>
+  <main id="main">
+    <section class="section section--narrow" id="overview">
+      <p class="lede">
+        Details coming soon. This residence pairs coastal calm with refined finishes—open living,
+        natural light, and indoor–outdoor flow designed for both entertaining and quiet evenings at home.
+      </p>
+    </section>
 
-    <p>
-      This beautifully designed coastal home features an open floor plan, modern finishes,
-      and abundant natural light. Perfect for entertaining or relaxing in style.
+    <section class="section" id="documents">
+      <h2 class="section__title">Documents</h2>
+      <div class="doc-grid">
+        <div class="doc-card" id="brochures">
+          <h3 class="doc-card__title">Property documents</h3>
+          <ul class="doc-list">
+            <li><a href="#" class="doc-link">Disclosures <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="#" class="doc-link">HOA information <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="#" class="doc-link">Survey <span class="doc-link__meta">PDF</span></a></li>
+          </ul>
+        </div>
+        <div class="doc-card">
+          <h3 class="doc-card__title">Brochures</h3>
+          <ul class="doc-list">
+            <li><a href="#" class="doc-link">One-page overview <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="#" class="doc-link">Feature sheet <span class="doc-link__meta">PDF</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gallery" aria-labelledby="gallery-heading">
+      <div class="section__head">
+        <h2 class="section__title" id="gallery-heading">Gallery</h2>
+        <p class="section__subtitle">Professional photography will appear here.</p>
+      </div>
+      <div class="gallery-feature">
+        <div class="gallery-feature__frame ph ph--lg" data-ph="1">
+          <span class="ph__label">Featured image</span>
+        </div>
+        <div class="gallery-feature__controls">
+          <button type="button" class="gallery-btn" disabled aria-label="Previous photo">Prev</button>
+          <button type="button" class="gallery-btn" disabled aria-label="Next photo">Next</button>
+          <span class="gallery-meta">View all photos <em>(coming soon)</em></span>
+        </div>
+      </div>
+      <div class="gallery-grid" role="list">
+        <div class="gallery-grid__cell ph" role="listitem" data-ph="2"><span class="ph__label">Photo</span></div>
+        <div class="gallery-grid__cell ph" role="listitem" data-ph="3"><span class="ph__label">Photo</span></div>
+        <div class="gallery-grid__cell ph" role="listitem" data-ph="4"><span class="ph__label">Photo</span></div>
+        <div class="gallery-grid__cell ph" role="listitem" data-ph="5"><span class="ph__label">Photo</span></div>
+        <div class="gallery-grid__cell ph" role="listitem" data-ph="6"><span class="ph__label">Photo</span></div>
+        <div class="gallery-grid__cell ph" role="listitem" data-ph="7"><span class="ph__label">Photo</span></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="features">
+      <h2 class="section__title">Features</h2>
+      <ul class="feature-list">
+        <li>Open floor plan</li>
+        <li>Primary suite with spa bath</li>
+        <li>Chef’s kitchen</li>
+        <li>Covered lanai</li>
+        <li>Impact glass</li>
+        <li>Two-car garage</li>
+        <li>Smart-home prewire</li>
+        <li>Low-maintenance landscaping</li>
+      </ul>
+    </section>
+
+    <section class="section" id="media">
+      <h2 class="section__title">Video · 3D tour · Floor plans</h2>
+      <div class="media-tabs" role="tablist" aria-label="Media">
+        <button type="button" class="media-tab is-active" role="tab" aria-selected="true" data-tab="video">Video</button>
+        <button type="button" class="media-tab" role="tab" aria-selected="false" data-tab="tour">3D tour</button>
+        <button type="button" class="media-tab" role="tab" aria-selected="false" data-tab="plans">Floor plans</button>
+      </div>
+      <div class="media-panels">
+        <div class="media-panel is-active" id="panel-video" role="tabpanel">
+          <div class="media-placeholder">
+            <p>Walkthrough video embed will go here.</p>
+          </div>
+        </div>
+        <div class="media-panel" id="panel-tour" role="tabpanel" hidden>
+          <div class="media-placeholder">
+            <p>Matterport or similar 3D tour link will go here.</p>
+          </div>
+        </div>
+        <div class="media-panel" id="panel-plans" role="tabpanel" hidden>
+          <ul class="plan-links">
+            <li><a href="#" class="plan-link">First floor <span>PDF</span></a></li>
+            <li><a href="#" class="plan-link">Second floor <span>PDF</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--map" id="map">
+      <h2 class="section__title">Map</h2>
+      <p class="map__address">Naples, FL <span class="map__note">(exact address on request)</span></p>
+      <div class="map__embed">
+        <iframe
+          title="Approximate location — Naples, Florida"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-81.85%2C26.05%2C-81.65%2C26.35&amp;layer=mapnik&amp;marker=26.1420%2C-81.7948">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section section--agents" aria-labelledby="agents-heading">
+      <h2 class="section__title" id="agents-heading">Represented by</h2>
+      <div class="agent-grid">
+        <article class="agent-card">
+          <div class="agent-card__avatar" aria-hidden="true"></div>
+          <h3 class="agent-card__name">Your name</h3>
+          <p class="agent-card__role">Listing agent</p>
+          <p class="agent-card__co">Brokerage name</p>
+          <a class="agent-card__tel" href="tel:+1234567890">(123) 456-7890</a>
+          <p class="agent-card__license">License #00000000</p>
+        </article>
+        <article class="agent-card">
+          <div class="agent-card__avatar" aria-hidden="true"></div>
+          <h3 class="agent-card__name">Partner agent</h3>
+          <p class="agent-card__role">Co-listing</p>
+          <p class="agent-card__co">Brokerage name</p>
+          <a class="agent-card__tel" href="tel:+1234567890">(123) 456-7890</a>
+          <p class="agent-card__license">License #00000000</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <h2 class="section__title">Get in touch</h2>
+          <p class="contact-intro__text">Send a message and we will follow up with full details, comps, and showing options.</p>
+        </div>
+        <form class="inquiry-form" action="#" method="post">
+          <label class="field">
+            <span class="field__label">First name <abbr title="required">*</abbr></span>
+            <input type="text" name="first_name" required autocomplete="given-name">
+          </label>
+          <label class="field">
+            <span class="field__label">Last name <abbr title="required">*</abbr></span>
+            <input type="text" name="last_name" required autocomplete="family-name">
+          </label>
+          <label class="field field--full">
+            <span class="field__label">Email <abbr title="required">*</abbr></span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label class="field field--full">
+            <span class="field__label">Phone <abbr title="required">*</abbr></span>
+            <input type="tel" name="phone" required autocomplete="tel">
+          </label>
+          <label class="field field--full">
+            <span class="field__label">Comment <abbr title="required">*</abbr></span>
+            <textarea name="comment" rows="4" required placeholder="Tell us what you are looking for…"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Send inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__legal">
+      Real estate licensees affiliated with the brokerage are independent contractor sales associates, not employees.
+      All rights reserved. This brokerage supports the Fair Housing Act and equal opportunity in housing.
     </p>
+    <p class="footer__copy">© <span id="year"></span> Coastal Oasis · Naples, FL</p>
+  </footer>
+
+  <div class="sticky-tour">
+    <button type="button" class="btn btn--dark" data-scroll="contact">Schedule a tour</button>
   </div>
 
-  <!-- GALLERY -->
-  <div class="section">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/400">
-      <img src="https://via.placeholder.com/401">
-      <img src="https://via.placeholder.com/402">
-      <img src="https://via.placeholder.com/403">
-    </div>
-  </div>
+  <script>
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- FEATURES -->
-  <div class="section">
-    <h2>Features</h2>
-    <div class="features">
-      <div class="feature">Pool</div>
-      <div class="feature">2-Car Garage</div>
-      <div class="feature">Ocean View</div>
-      <div class="feature">Renovated Kitchen</div>
-      <div class="feature">Hardwood Floors</div>
-    </div>
-  </div>
+      document.querySelectorAll('[data-scroll]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var id = el.getAttribute('data-scroll');
+          var target = document.getElementById(id);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
 
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Request Information</h2>
-    <div class="contact">
-      <input placeholder="Your Name">
-      <input placeholder="Email">
-      <input placeholder="Phone">
-      <textarea rows="4" placeholder="Message"></textarea>
-      <button>Submit Inquiry</button>
-    </div>
-  </div>
+      var priceBtn = document.querySelector('[data-price-toggle]');
+      if (priceBtn) {
+        priceBtn.addEventListener('click', function () {
+          var open = priceBtn.getAttribute('aria-expanded') === 'true';
+          priceBtn.setAttribute('aria-expanded', !open);
+          priceBtn.querySelector('.hero__price-label').hidden = !open;
+          priceBtn.querySelector('.hero__price-value').hidden = open;
+        });
+      }
 
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 Property Listing
-  </div>
-
+      var tabs = document.querySelectorAll('.media-tab');
+      var panels = {
+        video: document.getElementById('panel-video'),
+        tour: document.getElementById('panel-tour'),
+        plans: document.getElementById('panel-plans')
+      };
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var key = tab.getAttribute('data-tab');
+          tabs.forEach(function (t) {
+            t.classList.toggle('is-active', t === tab);
+            t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+          });
+          Object.keys(panels).forEach(function (k) {
+            var p = panels[k];
+            if (!p) return;
+            var on = k === key;
+            p.classList.toggle('is-active', on);
+            p.hidden = !on;
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
