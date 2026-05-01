@@ -21,7 +21,10 @@
 
   <nav class="nav" aria-label="Primary">
     <div class="nav__inner">
-      <span class="nav__brand">Coastal Oasis</span>
+      <div class="nav__brand-block">
+        <span class="nav__brand">Coastal Oasis</span>
+        <span class="nav__tagline">Where every day ends in a sunset</span>
+      </div>
       <div class="nav__actions">
         <a href="#brochures" class="nav__text">Brochures</a>
         <a href="#contact" class="nav__pill">Contact</a>
@@ -33,9 +36,9 @@
     <div class="hero__media" role="img" aria-label="Property photography placeholder"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow">Private listing</p>
+      <p class="hero__eyebrow">Private listing · Naples, Florida</p>
       <h1 class="hero__title">Coastal Oasis</h1>
-      <p class="hero__address">Naples, Florida</p>
+      <p class="hero__tagline">Where every day ends in a sunset</p>
       <button type="button" class="hero__price-btn" aria-expanded="false" data-price-toggle>
         <span class="hero__price-label">Click for price</span>
         <span class="hero__price-value" hidden>Contact for pricing</span>
@@ -55,8 +58,8 @@
   <main id="main">
     <section class="section section--narrow" id="overview">
       <p class="lede">
-        Details coming soon. This residence pairs coastal calm with refined finishes—open living,
-        natural light, and indoor–outdoor flow designed for both entertaining and quiet evenings at home.
+        Details coming soon. Coastal living with refined finishes—open living, natural light, and
+        spaces made for golden-hour unwinding on the lanai.
       </p>
     </section>
 
@@ -160,21 +163,13 @@
       </div>
     </section>
 
-    <section class="section section--agents" aria-labelledby="agents-heading">
-      <h2 class="section__title" id="agents-heading">Represented by</h2>
-      <div class="agent-grid">
+    <section class="section section--agents" aria-labelledby="agent-heading">
+      <h2 class="section__title" id="agent-heading">Your listing agent</h2>
+      <div class="agent-grid agent-grid--single">
         <article class="agent-card">
           <div class="agent-card__avatar" aria-hidden="true"></div>
           <h3 class="agent-card__name">Your name</h3>
           <p class="agent-card__role">Listing agent</p>
-          <p class="agent-card__co">Brokerage name</p>
-          <a class="agent-card__tel" href="tel:+1234567890">(123) 456-7890</a>
-          <p class="agent-card__license">License #00000000</p>
-        </article>
-        <article class="agent-card">
-          <div class="agent-card__avatar" aria-hidden="true"></div>
-          <h3 class="agent-card__name">Partner agent</h3>
-          <p class="agent-card__role">Co-listing</p>
           <p class="agent-card__co">Brokerage name</p>
           <a class="agent-card__tel" href="tel:+1234567890">(123) 456-7890</a>
           <p class="agent-card__license">License #00000000</p>
