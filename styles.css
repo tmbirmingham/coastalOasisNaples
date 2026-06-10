@@ -255,26 +255,13 @@ a:hover {
   text-shadow: 0 1px 12px rgba(10, 31, 46, 0.35);
 }
 
-.hero__price-btn {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.55);
+.hero__price {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: #fff;
-  padding: 0.85rem 1.5rem;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.hero__price-btn:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.85);
-}
-
-.hero__price-value {
-  letter-spacing: 0.06em;
 }
 
 /* —— Stat bar —— */
@@ -351,6 +338,25 @@ a:hover {
   margin: 0;
   font-size: 1.125rem;
   color: var(--ink-muted);
+}
+
+.read-more-btn {
+  margin-top: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent-hover);
+  padding: 0 0 0.1rem;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 /* —— Documents —— */

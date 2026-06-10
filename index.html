@@ -39,10 +39,7 @@
       <p class="hero__eyebrow">901 Gulf Shore Boulevard · Naples, Florida 34102</p>
       <h1 class="hero__title">Coastal Oasis</h1>
       <p class="hero__tagline">Where every day ends in a sunset</p>
-      <button type="button" class="hero__price-btn" aria-expanded="false" data-price-toggle>
-        <span class="hero__price-label">Click for price</span>
-        <span class="hero__price-value" hidden>Contact for pricing</span>
-      </button>
+      <p class="hero__price">$12,995,000</p>
     </div>
   </section>
 
@@ -58,8 +55,9 @@
   <main id="main">
     <section class="section section--narrow" id="overview">
       <p class="lede">
-Positioned on the third residential floor (fourth building level), this exceptional residence offers 3,440 square feet of beautifully designed living space, featuring 3 bedrooms, 3 full bathrooms, and a private powder bath.
+        Welcome to Coastal Oasis — Where Every Day Ends in a Sunset — a brand-new Gulf-view condo at The Residences at Naples Beach Club, where refined coastal design, sweeping southwest views, and effortless turnkey living create an extraordinary Naples lifestyle. Positioned on the third residential floor (fourth building level), this exceptional residence offers 3,440 square feet of beautifully designed living space, featuring 3 bedrooms, 3 full bathrooms, and a private powder bath.<span class="lede__more" hidden> Expansive glass doors and windows invite natural light throughout while framing captivating southwest Gulf views that deliver spectacular sunsets nearly every evening. Designed in a timeless beach-inspired coastal style, the interiors reflect relaxed elegance with carefully curated furnishings included, allowing immediate enjoyment without the time or expense of furnishing. Coastal Oasis provides a seamless, move-in-ready opportunity rarely found in newly completed luxury residences. The spacious 27-foot wide private terrace, spanning nearly 250 square feet, extends the living experience outdoors — an ideal setting to relax with morning coffee, entertain guests, or unwind as the sun sets over the Gulf. Located within the prestigious Residences at Naples Beach Club, residents enjoy access to one of Naples' most celebrated beachfront destinations, blending luxury living with resort-inspired surroundings. In addition, Four Seasons concierge level service awaits to tend to your every need. Whether serving as a seasonal retreat or year-round residence, Coastal Oasis offers an exceptional opportunity to own a newly completed Gulf-view home where every evening delivers a breathtaking sunset.</span>
       </p>
+      <button type="button" class="read-more-btn" aria-expanded="false" data-read-more>Read more</button>
     </section>
 
     <section class="section" id="documents">
@@ -111,14 +109,14 @@ Positioned on the third residential floor (fourth building level), this exceptio
     <section class="section section--alt" id="features">
       <h2 class="section__title">Features</h2>
       <ul class="feature-list">
-        <li>Brand-new Gulf-view residence</li>
-        <li>Southwest Florida sunset views</li>
-        <li>Turnkey furnished</li>
-        <li>27-foot private terrace</li>
-        <li>Coastal-inspired design</li>
-        <li>Four Seasons concierge service</li>
-        <li>Resort-style beachfront living</li>
-        <li>Open-concept living</li>
+        <li>Brand-new Gulf-view Residence</li>
+        <li>Southwest Florida Sunset Views</li>
+        <li>Furnished</li>
+        <li>27-foot Private Terrace</li>
+        <li>Coastal-inspired Design</li>
+        <li>Four Seasons Concierge Service</li>
+        <li>Resort-style Beachfront Living</li>
+        <li>Open-concept Living</li>
       </ul>
     </section>
 
@@ -167,7 +165,7 @@ Positioned on the third residential floor (fourth building level), this exceptio
       <div class="agent-grid agent-grid--single">
         <article class="agent-card">
           <div class="agent-card__avatar" aria-hidden="true"></div>
-          <h3 class="agent-card__name">Nick Bobzien</h3>
+          <h3 class="agent-card__name">Nick Bobzien, PA</h3>
           <p class="agent-card__role">Listing agent</p>
           <p class="agent-card__co">Downing Frye Reality</p>
           <a class="agent-card__tel" href="tel:+12398255411">(239) 825-5411</a>
@@ -232,13 +230,13 @@ Positioned on the third residential floor (fourth building level), this exceptio
         });
       });
 
-      var priceBtn = document.querySelector('[data-price-toggle]');
-      if (priceBtn) {
-        priceBtn.addEventListener('click', function () {
-          var open = priceBtn.getAttribute('aria-expanded') === 'true';
-          priceBtn.setAttribute('aria-expanded', !open);
-          priceBtn.querySelector('.hero__price-label').hidden = !open;
-          priceBtn.querySelector('.hero__price-value').hidden = open;
+      var readMoreBtn = document.querySelector('[data-read-more]');
+      if (readMoreBtn) {
+        readMoreBtn.addEventListener('click', function () {
+          var expanded = readMoreBtn.getAttribute('aria-expanded') === 'true';
+          readMoreBtn.setAttribute('aria-expanded', !expanded);
+          document.querySelector('.lede__more').hidden = expanded;
+          readMoreBtn.textContent = expanded ? 'Read more' : 'Read less';
         });
       }
 
