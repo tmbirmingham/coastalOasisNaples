@@ -36,7 +36,7 @@
     <div class="hero__media" role="img" aria-label="Property photography placeholder"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow">901 Gulf Shore Boulevard · Naples, Florida 34102</p>
+      <p class="hero__eyebrow">901 Gulf Shore Boulevard</p>
       <h1 class="hero__title">Coastal Oasis</h1>
       <p class="hero__tagline">Where every day ends in a sunset</p>
       <p class="hero__price">$12,995,000</p>
@@ -61,21 +61,12 @@
     </section>
 
     <section class="section" id="documents">
-      <h2 class="section__title">Documents</h2>
-      <div class="doc-grid">
-        <div class="doc-card" id="brochures">
-          <h3 class="doc-card__title">Property documents</h3>
-          <ul class="doc-list">
-            <li><a href="#" class="doc-link">Disclosures <span class="doc-link__meta">PDF</span></a></li>
-            <li><a href="#" class="doc-link">HOA information <span class="doc-link__meta">PDF</span></a></li>
-            <li><a href="#" class="doc-link">Survey <span class="doc-link__meta">PDF</span></a></li>
-          </ul>
-        </div>
+      <h2 class="section__title" id="brochures">Documents</h2>
+      <div class="doc-centered">
         <div class="doc-card">
-          <h3 class="doc-card__title">Brochures</h3>
           <ul class="doc-list">
-            <li><a href="#" class="doc-link">One-page overview <span class="doc-link__meta">PDF</span></a></li>
-            <li><a href="#" class="doc-link">Feature sheet <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="#" class="doc-link">One-page brochure <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="#" class="doc-link">Floor plan <span class="doc-link__meta">PDF</span></a></li>
           </ul>
         </div>
       </div>
@@ -84,26 +75,19 @@
     <section class="section section--gallery" aria-labelledby="gallery-heading">
       <div class="section__head">
         <h2 class="section__title" id="gallery-heading">Gallery</h2>
-        <p class="section__subtitle">Professional photography will appear here.</p>
       </div>
       <div class="gallery-feature">
-        <div class="gallery-feature__frame ph ph--lg" data-ph="1">
-          <span class="ph__label">Featured image</span>
+        <div class="gallery-feature__frame ph ph--lg" id="gallery-main">
+          <span class="ph__label" id="gallery-main-ph">Photos coming soon</span>
+          <img id="gallery-main-img" src="" alt="" hidden style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
         </div>
         <div class="gallery-feature__controls">
-          <button type="button" class="gallery-btn" disabled aria-label="Previous photo">Prev</button>
-          <button type="button" class="gallery-btn" disabled aria-label="Next photo">Next</button>
-          <span class="gallery-meta">View all photos <em>(coming soon)</em></span>
+          <button type="button" class="gallery-btn" id="gallery-prev" aria-label="Previous photo">Prev</button>
+          <button type="button" class="gallery-btn" id="gallery-next" aria-label="Next photo">Next</button>
+          <span class="gallery-meta" id="gallery-count"></span>
         </div>
       </div>
-      <div class="gallery-grid" role="list">
-        <div class="gallery-grid__cell ph" role="listitem" data-ph="2"><span class="ph__label">Photo</span></div>
-        <div class="gallery-grid__cell ph" role="listitem" data-ph="3"><span class="ph__label">Photo</span></div>
-        <div class="gallery-grid__cell ph" role="listitem" data-ph="4"><span class="ph__label">Photo</span></div>
-        <div class="gallery-grid__cell ph" role="listitem" data-ph="5"><span class="ph__label">Photo</span></div>
-        <div class="gallery-grid__cell ph" role="listitem" data-ph="6"><span class="ph__label">Photo</span></div>
-        <div class="gallery-grid__cell ph" role="listitem" data-ph="7"><span class="ph__label">Photo</span></div>
-      </div>
+      <div class="gallery-grid" role="list" id="gallery-grid"></div>
     </section>
 
     <section class="section section--alt" id="features">
@@ -121,35 +105,34 @@
     </section>
 
     <section class="section" id="media">
-      <h2 class="section__title">Video · 3D tour · Floor plans</h2>
+      <h2 class="section__title">Video · 3D tour</h2>
       <div class="media-tabs" role="tablist" aria-label="Media">
         <button type="button" class="media-tab is-active" role="tab" aria-selected="true" data-tab="video">Video</button>
         <button type="button" class="media-tab" role="tab" aria-selected="false" data-tab="tour">3D tour</button>
-        <button type="button" class="media-tab" role="tab" aria-selected="false" data-tab="plans">Floor plans</button>
       </div>
       <div class="media-panels">
         <div class="media-panel is-active" id="panel-video" role="tabpanel">
+          <!-- TO ADD VIDEO: paste your YouTube embed URL into the src below, then remove the media-placeholder div -->
+          <!-- YouTube example src: https://www.youtube.com/embed/VIDEO_ID -->
+          <!-- <iframe class="media-embed" src="https://www.youtube.com/embed/VIDEO_ID" title="Coastal Oasis walkthrough" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
           <div class="media-placeholder">
-            <p>Walkthrough video embed will go here.</p>
+            <p>Walkthrough video coming soon.</p>
           </div>
         </div>
         <div class="media-panel" id="panel-tour" role="tabpanel" hidden>
+          <!-- TO ADD 3D TOUR: paste your Matterport embed URL into the src below, then remove the media-placeholder div -->
+          <!-- Matterport example src: https://my.matterport.com/show/?m=MODEL_ID -->
+          <!-- <iframe class="media-embed" src="https://my.matterport.com/show/?m=MODEL_ID" title="Coastal Oasis 3D tour" allowfullscreen></iframe> -->
           <div class="media-placeholder">
-            <p>Matterport or similar 3D tour link will go here.</p>
+            <p>3D tour coming soon.</p>
           </div>
-        </div>
-        <div class="media-panel" id="panel-plans" role="tabpanel" hidden>
-          <ul class="plan-links">
-            <li><a href="#" class="plan-link">First floor <span>PDF</span></a></li>
-            <li><a href="#" class="plan-link">Second floor <span>PDF</span></a></li>
-          </ul>
         </div>
       </div>
     </section>
 
     <section class="section section--map" id="map">
       <h2 class="section__title">Map</h2>
-      <p class="map__address">Naples, FL <span class="map__note">(exact address on request)</span></p>
+      <p class="map__address">901 Gulf Shore Boulevard <span class="map__note">Naples, FL 34102</span></p>
       <div class="map__embed">
         <iframe
             title="901 Gulf Shore Blvd N #C-304, Naples, FL"
@@ -179,7 +162,12 @@
           <h2 class="section__title">Get in touch</h2>
           <p class="contact-intro__text">Send a message and we will follow up with full details, comps, and showing options.</p>
         </div>
-        <form class="inquiry-form" action="#" method="post">
+        <!-- Web3Forms: sign up free at web3forms.com, get your access key, paste it below -->
+        <form class="inquiry-form" action="https://api.web3forms.com/submit" method="post" id="inquiry-form">
+          <!-- REPLACE the value below with your access key from web3forms.com -->
+          <input type="hidden" name="access_key" value="689972a8-8459-4c55-900d-cbeafff9a23d">
+          <input type="hidden" name="subject" value="New inquiry — Coastal Oasis">
+          <input type="hidden" name="redirect" value="false">
           <label class="field">
             <span class="field__label">First name <abbr title="required">*</abbr></span>
             <input type="text" name="first_name" required autocomplete="given-name">
@@ -200,7 +188,8 @@
             <span class="field__label">Comment <abbr title="required">*</abbr></span>
             <textarea name="comment" rows="4" required placeholder="Tell us what you are looking for…"></textarea>
           </label>
-          <button type="submit" class="btn btn--primary">Send inquiry</button>
+          <button type="submit" class="btn btn--primary" id="form-submit">Send inquiry</button>
+          <p class="form-status" id="form-status" hidden></p>
         </form>
       </div>
     </section>
@@ -221,6 +210,97 @@
   <script>
     (function () {
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // ── Gallery ──────────────────────────────────────────────────────────────
+      // ADD YOUR CLOUDFLARE IMAGE URLS HERE — one per line.
+      // Leave the array empty and placeholders will show until photos are ready.
+      var PHOTOS = [
+        // 'https://imagedelivery.net/YOUR_ACCOUNT_HASH/IMAGE_ID/public',
+        // 'https://imagedelivery.net/YOUR_ACCOUNT_HASH/IMAGE_ID/public',
+        // add more as needed
+      ];
+
+      var mainImg   = document.getElementById('gallery-main-img');
+      var mainPh    = document.getElementById('gallery-main-ph');
+      var prevBtn   = document.getElementById('gallery-prev');
+      var nextBtn   = document.getElementById('gallery-next');
+      var countEl   = document.getElementById('gallery-count');
+      var grid      = document.getElementById('gallery-grid');
+      var current   = 0;
+
+      function showPhoto(i) {
+        current = (i + PHOTOS.length) % PHOTOS.length;
+        mainImg.src = PHOTOS[current];
+        mainImg.alt = 'Coastal Oasis — photo ' + (current + 1);
+        mainImg.hidden = false;
+        mainPh.hidden = true;
+        countEl.textContent = (current + 1) + ' / ' + PHOTOS.length;
+        grid.querySelectorAll('.gallery-thumb').forEach(function (t, idx) {
+          t.classList.toggle('is-active', idx === current);
+        });
+      }
+
+      if (PHOTOS.length) {
+        prevBtn.addEventListener('click', function () { showPhoto(current - 1); });
+        nextBtn.addEventListener('click', function () { showPhoto(current + 1); });
+
+        PHOTOS.forEach(function (url, idx) {
+          var cell = document.createElement('div');
+          cell.className = 'gallery-grid__cell gallery-thumb';
+          cell.setAttribute('role', 'listitem');
+          cell.setAttribute('tabindex', '0');
+          cell.setAttribute('aria-label', 'Photo ' + (idx + 1));
+          var img = document.createElement('img');
+          img.src = url;
+          img.alt = 'Coastal Oasis — photo ' + (idx + 1);
+          img.loading = 'lazy';
+          img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+          cell.appendChild(img);
+          cell.addEventListener('click', function () { showPhoto(idx); });
+          cell.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') showPhoto(idx); });
+          grid.appendChild(cell);
+        });
+
+        showPhoto(0);
+      } else {
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        countEl.textContent = '';
+      }
+
+      // ── Contact form (Web3Forms) ──────────────────────────────────────────────
+      var form    = document.getElementById('inquiry-form');
+      var status  = document.getElementById('form-status');
+      var submitBtn = document.getElementById('form-submit');
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending…';
+          status.hidden = true;
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form)
+          })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data.success) {
+              form.innerHTML = '<div class="form-success"><p class="form-success__title">Message sent!</p><p class="form-success__body">Thank you for reaching out. We\'ll be in touch shortly with full details and showing options.</p></div>';
+            } else {
+              throw new Error(data.message || 'Submission failed');
+            }
+          })
+          .catch(function () {
+            status.textContent = 'Something went wrong. Please try again or call us directly.';
+            status.className = 'form-status form-status--err';
+            status.hidden = false;
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send inquiry';
+          });
+        });
+      }
 
       document.querySelectorAll('[data-scroll]').forEach(function (el) {
         el.addEventListener('click', function () {
