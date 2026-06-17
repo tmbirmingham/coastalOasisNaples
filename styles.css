@@ -126,17 +126,18 @@ a:hover {
   max-width: var(--max);
   margin: 0 auto;
   min-height: 3.5rem;
-  padding: 0.65rem var(--space);
+  padding: 0.75rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 }
 
 .nav__brand-block {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+
+  align-items: flex-start;
 }
 
 .nav__brand {
@@ -162,6 +163,8 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+
+  justify-content: flex-end;
 }
 
 .nav__text {
@@ -202,8 +205,10 @@ a:hover {
 
   background-image: url("YOUR_CLOUDFLARE_URL");
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
+
+  /* desktop framing */
+  background-position: center 40%;
 }
 
 .hero__image {
@@ -496,7 +501,18 @@ a:hover {
   border: 1px solid var(--line);
   background: #fff;
   color: var(--ink-muted);
-  cursor: not-allowed;
+  transition: all 0.15s ease;
+}
+
+.gallery-btn:hover {
+  background: #eef4f8;
+  color: var(--ink);
+  border-color: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.gallery-btn:active {
+  transform: translateY(0px);
 }
 
 .gallery-meta {
@@ -524,29 +540,21 @@ a:hover {
 
 .ph {
   position: relative;
-  background:
-    linear-gradient(145deg, #c5d8e8 0%, #dce8f2 45%, #b8cfe0 100%);
+  background: #e6eef5;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .ph--lg {
   min-height: min(52vh, 520px);
-  aspect-ratio: auto;
 }
 
 .ph::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 12px,
-    rgba(255, 255, 255, 0.12) 12px,
-    rgba(255, 255, 255, 0.12) 13px
-  );
   pointer-events: none;
 }
 
@@ -713,7 +721,16 @@ a:hover {
   height: 72px;
   margin: 0 auto 1rem;
   border-radius: 50%;
-  background: linear-gradient(145deg, var(--bg-alt), var(--line));
+  background: url('https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/d8cfe66e-2dcf-4980-9d7c-3be913110b00/gallery');
+}
+
+.agent-card__avatar-img {
+  width: 288px;
+  height: 288px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 .agent-card__name {
@@ -985,7 +1002,7 @@ a:hover {
 @media (max-width: 768px) {
   .hero {
     min-height: 70vh;
-    background-position: center center;
+    background-position: center 25%;
   }
 
   .hero__title {
