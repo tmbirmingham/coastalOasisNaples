@@ -686,6 +686,7 @@ a:hover {
   background: var(--bg-alt);
   aspect-ratio: 16 / 9;
   max-height: 420px;
+  width: 100%;
 }
 
 .map__embed iframe {
