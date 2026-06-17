@@ -1013,3 +1013,33 @@ a:hover {
     max-width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+
+  /* Agent card spacing */
+  .agent-card {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Make avatar bigger + better proportioned on mobile */
+  .agent-card__avatar-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  /* Improve text spacing */
+  .agent-card__name {
+    font-size: 1.25rem;
+  }
+
+  .agent-card__co {
+    font-size: 0.95rem;
+  }
+
+  .agent-card__tel {
+    font-size: 1rem;
+  }
+}
