@@ -29,7 +29,7 @@
         <span class="nav__tagline">Where every day ends in a sunset</span>
       </div>
       <div class="nav__actions">
-        <a href="#brochures" class="nav__text">Brochures</a>
+        <a href="#brochures" class="nav__text">Brochure</a>
         <a href="#contact" class="nav__pill">Contact</a>
       </div>
     </div>
@@ -67,8 +67,8 @@
       <div class="doc-centered">
         <div class="doc-card">
           <ul class="doc-list">
-            <li><a href="/CoastalOasis-Brochure.pdf" class="doc-link">Brochure <span class="doc-link__meta">PDF</span></a></li>
-            <li><a href="/FloorPlan-C-304-Enlarged.pdf" class="doc-link">Floor plan <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="/CoastalOasis-Brochure.pdf" class="doc-link" target="_blank" rel="noopener noreferrer">Brochure <span class="doc-link__meta">PDF</span></a></li>
+            <li><a href="/FloorPlan-C-304-Enlarged.pdf" class="doc-link" target="_blank" rel="noopener noreferrer">Floor plan <span class="doc-link__meta">PDF</span></a></li>
           </ul>
         </div>
       </div>
@@ -89,6 +89,27 @@
         </div>
       </div>
       <div class="gallery-grid" role="list" id="gallery-grid"></div>
+    </section>
+
+    
+    <section class="section" id="media">
+      <h2 class="section__title">Media</h2>
+      <div class="media-tabs" role="tablist" aria-label="Media">
+        <button type="button" class="media-tab is-active" role="tab" aria-selected="true" data-tab="video">Video</button>
+        <button type="button" class="media-tab" role="tab" aria-selected="false" data-tab="tour">MLS Listing</button>
+      </div>
+      <div class="media-panels">
+        <div class="media-panel is-active" id="panel-video" role="tabpanel">
+          <h3>Video Walkthrough</h3>
+          <iframe class="media-embed" src="https://player.vimeo.com/video/1202287513?badge=0&autopause=0&player_id=0&app_id=58479" title="Coastal Oasis walkthrough" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p>Take a guided tour of Coastal Oasis and experience the residence firsthand.</p>
+        </div>
+        <div class="media-panel" id="panel-tour" role="tabpanel" hidden>
+          <a class="media-card" href="https://portal.onehome.com/en-US/property/aotf~1158643793~SWFL?token=eyJPU04iOiJTV0ZMIiwidHlwZSI6IjAiLCJzZXRpZCI6IjE5MTAxNzY5MSIsInNldGtleSI6IjM5OSIsImVtYWlsIjoiTmlja0BOaWNrQm9iemllbi5jb20iLCJyZXNvdXJjZWlkIjowLCJhZ2VudGlkIjoyNTcxLCJsaXN0aW5naWQiOiI2NDI3Mzc2MCIsIlZpZXdNb2RlIjoiMSJ9&SMS=0&searchId=92d92ce1-089e-33a9-9597-b6b345058ad8" target="_blank" rel="noopener noreferrer"><h3>MLS Listing</h3></a>
+            
+            <p class="media-card">View the complete MLS details, specifications, and listing information.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section section--alt" id="features">
@@ -186,58 +207,61 @@
 
       // ── Gallery ──────────────────────────────────────────────────────────────
       var PHOTOS = [
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/8bbc36de-af75-4379-77ed-54d623c7ff00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/0e2c979f-80d8-43d7-28d6-3f6972b15b00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a7e4c417-dd89-4adc-a544-52f06ec3db00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3dc0f00d-5cb6-4210-f2ed-37d7374e3100/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/8a62828e-0537-42b9-7cac-27be9d3a1d00/gallery',
         'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/00ec4980-e166-4dcb-cc49-36da4fa38b00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/b4bd27cb-bb28-4194-7b0d-05e581bcbd00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/2b3337c1-8ebd-42de-965b-07089b8ca600/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/dac9c622-6e5c-4135-77be-289d2d4c5d00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/b37ae7f8-bead-4523-3200-a475e0570600/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/8c915b92-7379-41f7-675e-ea4436a44c00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/7c4de6f2-5854-4212-e71f-a7e510aa5700/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/01409490-64dd-4de1-8c6c-f76574a1f800/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/d1db5940-329c-40eb-3cd7-741a2662af00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/50b511b6-69d4-4589-748f-7407d1eee800/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/37e4c781-5b39-4c22-4461-4b313910f000/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/209137cf-cc74-4f6b-cee5-b7f570e42300/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a8f20107-84d7-491d-95fa-919f68af8b00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/22256941-6890-4eaa-90c7-3f8932df4800/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/58ee0614-4419-4cc8-eecb-b961a65ea000/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/b902a198-7b1b-4e7b-6352-aaaf09cf1500/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/c0798bd2-1a73-405b-7db2-41d856609c00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/ad958c0f-a387-45b8-01b2-9a3ad328ac00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/0afe2691-71eb-447c-ebfb-f9c7bb46cd00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/d5362dd4-e2c7-4de2-cec1-745b45ff4700/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/392938f4-6b66-4524-ecce-5382c7380e00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/587cb88a-d93e-4085-765f-b91776432b00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/23a90390-5a5c-4809-d784-6c6b725af600/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/c67a9192-1283-4f7f-725b-58a1ff0bbc00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/2a09397c-5590-46ea-7e68-eceb0c4b5e00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f11cc872-3bac-4ef4-3ff0-cc244fb65000/gallery',
         'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/30daaf46-e98e-4fe6-9f3b-8c0bfd2fc500/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/16ea7d21-a601-47c0-18ab-a04503a0ff00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3cf9e676-7341-4ef9-0016-c799da4cf600/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/0c156fad-219e-4e29-230b-d13d4fd4d900/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a99b57e8-920a-47b5-3d57-c2ffb3cc1f00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f7fbc5f6-4d26-4dea-5edf-ee1647920000/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/36be5cbe-2da3-4dbb-76c6-8d17cf35b500/gallery',
         'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/aac0edc5-450a-46e5-2ba2-bab5c2d81200/gallery',
         'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a9291a4c-d857-4c36-b702-a4218ebd7e00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/1f329ce2-1a3c-4e60-8018-c9c3554f4900/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/0c156fad-219e-4e29-230b-d13d4fd4d900/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/938af99f-a890-4870-d66d-e041dc716400/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f7fbc5f6-4d26-4dea-5edf-ee1647920000/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f4145cb3-da2e-49b8-70e6-bdf6eddf0d00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/ad488e99-fe0d-45ed-765f-a96569ed9200/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3d57aea6-7d96-4a95-3259-b3e5be7c2e00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/8c915b92-7379-41f7-675e-ea4436a44c00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/10a3a99b-4f27-440b-db7c-17f5564ebc00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3cf9e676-7341-4ef9-0016-c799da4cf600/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/6c387287-40c2-4ea7-0cc4-d3f2274a4300/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/ea6dbd10-271b-4018-8bdc-c2a827b7c500/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/7c4de6f2-5854-4212-e71f-a7e510aa5700/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f06236d7-fc60-415e-bb2f-7b979d540200/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/19552e9b-9eb2-4813-c991-98507116b500/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/dac9c622-6e5c-4135-77be-289d2d4c5d00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3a9880a6-b2dd-4f83-5b6a-314ec6378800/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/37e4c781-5b39-4c22-4461-4b313910f000/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/587cb88a-d93e-4085-765f-b91776432b00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/d1db5940-329c-40eb-3cd7-741a2662af00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f11cc872-3bac-4ef4-3ff0-cc244fb65000/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/c0798bd2-1a73-405b-7db2-41d856609c00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a99b57e8-920a-47b5-3d57-c2ffb3cc1f00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/392938f4-6b66-4524-ecce-5382c7380e00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/36be5cbe-2da3-4dbb-76c6-8d17cf35b500/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/7643e0fc-1e42-42d7-7eca-7d5cac3ef200/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/50b511b6-69d4-4589-748f-7407d1eee800/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/22256941-6890-4eaa-90c7-3f8932df4800/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/2b3337c1-8ebd-42de-965b-07089b8ca600/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a8f20107-84d7-491d-95fa-919f68af8b00/gallery',
         'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/eb64e0ee-baf7-450e-4a2a-8d7b67e51c00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/b37ae7f8-bead-4523-3200-a475e0570600/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/2a09397c-5590-46ea-7e68-eceb0c4b5e00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/c67a9192-1283-4f7f-725b-58a1ff0bbc00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/01409490-64dd-4de1-8c6c-f76574a1f800/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/d5362dd4-e2c7-4de2-cec1-745b45ff4700/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/b902a198-7b1b-4e7b-6352-aaaf09cf1500/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/8a62828e-0537-42b9-7cac-27be9d3a1d00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/ad958c0f-a387-45b8-01b2-9a3ad328ac00/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/23a90390-5a5c-4809-d784-6c6b725af600/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/58ee0614-4419-4cc8-eecb-b961a65ea000/gallery',
-        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/0afe2691-71eb-447c-ebfb-f9c7bb46cd00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/ea6dbd10-271b-4018-8bdc-c2a827b7c500/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3a9880a6-b2dd-4f83-5b6a-314ec6378800/gallery',
         'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/1ffca744-4697-4231-3871-f0c8ab13b100/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/7643e0fc-1e42-42d7-7eca-7d5cac3ef200/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f4145cb3-da2e-49b8-70e6-bdf6eddf0d00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/1f329ce2-1a3c-4e60-8018-c9c3554f4900/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/938af99f-a890-4870-d66d-e041dc716400/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/938af99f-a890-4870-d66d-e041dc716400/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/8bbc36de-af75-4379-77ed-54d623c7ff00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f4145cb3-da2e-49b8-70e6-bdf6eddf0d00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/a7e4c417-dd89-4adc-a544-52f06ec3db00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/19552e9b-9eb2-4813-c991-98507116b500/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/6c387287-40c2-4ea7-0cc4-d3f2274a4300/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/0e2c979f-80d8-43d7-28d6-3f6972b15b00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/b4bd27cb-bb28-4194-7b0d-05e581bcbd00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/f06236d7-fc60-415e-bb2f-7b979d540200/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/e69ec09d-703f-497d-8baa-8c527f56f000/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/10a3a99b-4f27-440b-db7c-17f5564ebc00/gallery',
+        'https://imagedelivery.net/WdI-n0G3sdD7jeuN5IS6kA/3dc0f00d-5cb6-4210-f2ed-37d7374e3100/gallery',
       ];
 
       var mainImg   = document.getElementById('gallery-main-img');
