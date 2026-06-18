@@ -669,6 +669,46 @@ a:hover {
   color: var(--ink-muted);
 }
 
+.listing-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.listing-card-content {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.listing-card:hover .listing-card-content {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.listing-card h3 {
+  margin: 0;
+  padding: 1.25rem;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--ink, #132833);
+}
+
+.listing-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 933;
+  object-fit: cover;
+}
+
 /* —— Map —— */
 .section--map .map__address {
   margin: 0 0 1rem;
@@ -1831,6 +1871,18 @@ a:hover {
   margin: 0 auto;
   display: grid;
   gap: 2.5rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .listing-card-content {
+    border-radius: 12px;
+  }
+
+  .listing-card h3 {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
