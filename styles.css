@@ -2161,3 +2161,18 @@ a:hover {
   height: 100%;
   border: 0;
 }
+
+/* —— Device-based video: portrait on mobile, landscape on desktop —— */
+.media-embed--landscape {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .media-embed--landscape {
+    display: block;
+  }
+
+  .media-embed--portrait {
+    display: none;
+  }
+}
