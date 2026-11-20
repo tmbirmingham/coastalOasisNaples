@@ -2144,3 +2144,20 @@ a:hover {
     font-size: 1rem;
   }
 }
+
+/* —— Portrait (9:16) Cloudflare Stream video —— */
+.media-embed--portrait {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  max-width: 360px;
+  margin: 2rem auto 0;
+}
+
+.media-embed--portrait iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
